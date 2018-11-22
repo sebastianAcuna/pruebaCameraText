@@ -131,12 +131,12 @@ public class MainActivity extends AppCompatActivity {
 
                                 String[] listaString = stringBuilder.toString().split("\n");
 
-                                for (int i = 0; i < listaString.length; i++){
+                                for (String aListaString : listaString) {
 
-                                    if(Patterns.EMAIL_ADDRESS.matcher(listaString[i]).matches()){
-                                        txt_correo.setText(listaString[i]);
-                                    }else if(Patterns.WEB_URL.matcher(listaString[i]).matches()){
-                                        textView.setText(listaString[i]);
+                                    if (Patterns.EMAIL_ADDRESS.matcher(aListaString).matches()) {
+                                        txt_correo.setText(aListaString);
+                                    } else if (Patterns.WEB_URL.matcher(aListaString).matches()) {
+                                        textView.setText(aListaString);
                                     }
                                 }
 
